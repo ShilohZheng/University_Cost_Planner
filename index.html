@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Cost Planner</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                University Cost Planner
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comparison.html">Comparison</a></li>
+                <li><a href="calculator.html">Budget Calculator</a></li>
+                <li><a href="savings.html">Savings Tracker</a></li>
+                <li><a href="tips.html">Financial Tips</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Plan Your University Future Wisely
+            </h1>
+
+            <p>
+                Estimate tuition, housing, food, and living costs
+                to better prepare for post-secondary education in Canada.
+            </p>
+
+            <a href="calculator.html" class="hero-button">
+                Start Planning
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+
+        <div class="stat-card">
+            <h2>$8,000+</h2>
+            <p>Average Tuition</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>$12,000+</h2>
+            <p>Residence & Food</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>$2,000+</h2>
+            <p>Books & Supplies</p>
+        </div>
+
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+
+        <h2>Why Financial Planning Matters</h2>
+
+        <p>
+            Many students underestimate the true cost of university.
+            This website helps high school students understand tuition,
+            budgeting, savings, and financial responsibility before entering university life.
+        </p>
+
+    </section>
+
+    <!-- Chart Section -->
+    <section class="chart-section">
+
+        <h2>Estimated Student Expenses</h2>
+
+        <div class="chart-container">
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Grade 12 Finance/Accounting Capstone Project
+        </p>
+
+        <p>
+            Created by Shiloh Zheng
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
