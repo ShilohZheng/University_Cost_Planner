@@ -13,7 +13,7 @@
 }
 
 .comparison-hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
 
     color: #1e3a5f;
 
@@ -25,9 +25,11 @@
 
     color: #4b5563;
 
-    max-width: 700px;
+    max-width: 750px;
 
     margin: auto;
+
+    line-height: 1.8;
 }
 
 /* TABLE SECTION */
@@ -60,11 +62,18 @@ thead {
     color: white;
 }
 
-th,
+th {
+    padding: 20px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
 td {
     padding: 18px;
 
-    text-align: center;
+    color: #374151;
 
     border-bottom: 1px solid #e5e7eb;
 }
@@ -75,6 +84,8 @@ tbody tr {
 
 tbody tr:hover {
     background-color: #f3f4f6;
+
+    transform: scale(1.01);
 }
 
 /* INFO SECTION */
@@ -86,7 +97,7 @@ tbody tr:hover {
 }
 
 .info-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 
     color: #1e3a5f;
 
@@ -118,17 +129,21 @@ tbody tr:hover {
 }
 
 .info-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 }
 
 .info-card h3 {
     color: #1e3a5f;
 
     margin-bottom: 15px;
+
+    font-size: 1.3rem;
 }
 
 .info-card p {
     color: #4b5563;
+
+    line-height: 1.7;
 }
 
 /* RESPONSIVE */
@@ -136,7 +151,7 @@ tbody tr:hover {
 @media (max-width: 900px) {
 
     .comparison-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .info-section h2 {
@@ -151,11 +166,15 @@ tbody tr:hover {
         padding: 100px 8% 60px;
     }
 
+    .comparison-hero h1 {
+        font-size: 2rem;
+    }
+
     th,
     td {
-        font-size: 0.9rem;
+        padding: 12px;
 
-        padding: 10px;
+        font-size: 0.9rem;
     }
 
 }
