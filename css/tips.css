@@ -1,4 +1,4 @@
-/* HERO SECTION */
+/* HERO */
 
 .tips-hero {
     background: linear-gradient(
@@ -25,7 +25,7 @@
 
     color: #4b5563;
 
-    max-width: 700px;
+    max-width: 750px;
 
     margin: auto;
 
@@ -43,9 +43,9 @@
 
     justify-content: center;
 
-    gap: 30px;
-
     flex-wrap: wrap;
+
+    gap: 30px;
 }
 
 .tip-card {
@@ -57,21 +57,19 @@
 
     border-radius: 20px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 
-    transition: 0.3s;
-}
+    transition: 0.3s ease;
 
-.tip-card:hover {
-    transform: translateY(-10px);
+    opacity: 0;
+
+    transform: translateY(30px);
 }
 
 .tip-card h2 {
     color: #1e3a5f;
 
     margin-bottom: 15px;
-
-    font-size: 1.5rem;
 }
 
 .tip-card p {
@@ -80,7 +78,13 @@
     line-height: 1.7;
 }
 
-/* QUOTE SECTION */
+/* HOVER */
+
+.tip-card:hover {
+    transform: translateY(-10px);
+}
+
+/* QUOTE */
 
 .quote-section {
     padding: 40px 10% 100px;
@@ -95,11 +99,17 @@
 
     border-radius: 25px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-
     max-width: 900px;
 
     margin: auto;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: 0.6s ease;
 }
 
 .quote-box h2 {
