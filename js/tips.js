@@ -1,40 +1,28 @@
-// FINANCIAL TIPS PAGE ANIMATIONS
+// TIPS PAGE ANIMATION (FIXED)
 
-const cards = document.querySelectorAll(
-    '.tip-card, .quote-box'
-);
+const elements = document.querySelectorAll('.tip-card, .quote-box');
 
-window.addEventListener('scroll', () => {
+// SCROLL CHECK
+function revealOnScroll() {
 
-    cards.forEach(card => {
+    elements.forEach(el => {
 
-        const cardTop =
-            card.getBoundingClientRect().top;
+        const top = el.getBoundingClientRect().top;
 
-        if (cardTop < window.innerHeight - 50) {
+        if (top < window.innerHeight - 80) {
 
-            card.style.opacity = '1';
+            el.style.opacity = '1';
 
-            card.style.transform =
-                'translateY(0)';
+            el.style.transform = 'translateY(0)';
 
         }
 
     });
 
-});
+}
 
+// RUN ON SCROLL
+window.addEventListener('scroll', revealOnScroll);
 
-// INITIAL STYLES
-
-cards.forEach(card => {
-
-    card.style.opacity = '0';
-
-    card.style.transform =
-        'translateY(40px)';
-
-    card.style.transition =
-        '0.6s ease';
-
-});
+// RUN ON LOAD (important fix)
+window.addEventListener('load', revealOnScroll);
