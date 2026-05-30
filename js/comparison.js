@@ -1,53 +1,49 @@
-// COMPARISON PAGE ANIMATIONS
+// COMPARISON PAGE
 
-const infoCards = document.querySelectorAll('.info-card');
+const sections = document.querySelectorAll(
+    '.comparison-section, .reference-section'
+);
 
-window.addEventListener('scroll', () => {
+function revealSections() {
 
-    infoCards.forEach(card => {
+    sections.forEach(section => {
 
-        const cardTop =
-            card.getBoundingClientRect().top;
+        const top =
+            section.getBoundingClientRect().top;
 
-        if (cardTop < window.innerHeight - 50) {
+        if (top < window.innerHeight - 100) {
 
-            card.style.opacity = '1';
+            section.style.opacity = '1';
 
-            card.style.transform =
+            section.style.transform =
                 'translateY(0)';
-
         }
 
     });
 
-});
+}
 
+// INITIAL STATE
 
-// INITIAL STYLES
+sections.forEach(section => {
 
-infoCards.forEach(card => {
+    section.style.opacity = '0';
 
-    card.style.opacity = '0';
+    section.style.transform =
+        'translateY(30px)';
 
-    card.style.transform =
-        'translateY(40px)';
-
-    card.style.transition =
+    section.style.transition =
         '0.6s ease';
-
 });
 
+// EVENTS
 
-// TABLE ROW HOVER EFFECT
+window.addEventListener(
+    'scroll',
+    revealSections
+);
 
-const rows = document.querySelectorAll('tbody tr');
-
-rows.forEach(row => {
-
-    row.addEventListener('mouseenter', () => {
-
-        row.style.transition = '0.3s';
-
-    });
-
-});
+window.addEventListener(
+    'load',
+    revealSections
+);
